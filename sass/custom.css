@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-image: url("../images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  width: 96%;
+  margin: 0 auto;
+}
+
+h1 {
+  display: inline-block;
+  background-color: #4e6c81;
+  color: #ffcaca;
+  font-size: 40px;
+  margin-top: 12px;
+  margin-left: 12px;
+  padding: 0 8px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #294674;
+  min-height: 8vh;
+}
+
+.ham {
+  display: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.ham span {
+  display: block;
+  background-color: #ffcaca;
+  width: 28px;
+  height: 3px;
+  margin: 8px auto;
+  border-radius: 2px;
+  transition: 0.2s 0.1s;
+}
+
+.ham:hover {
+  transform: rotate(360deg);
+}
+
+.enlaces-menu {
+  display: flex;
+  padding: 0;
+}
+
+.enlaces-menu li {
+  padding: 0 24px;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.enlaces-menu li a {
+  color: #ffcaca;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.enlaces-menu li:hover {
+  background-color: rgb(62, 130, 197);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  h1 {
+    margin-left: 48px;
+  }
+  .ham {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0;
+  }
+  .enlaces-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 92vh;
+    margin: 0;
+    padding: 0;
+  }
+  .enlaces-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  .enlaces-menu.activado {
+    display: flex;
+    animation: muestraMenu 350ms ease-in-out;
+  }
+}
+@keyframes muestraMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.br-1.animado {
+  transform: rotate(-45deg) translate(-5px, 10px);
+}
+
+.br-2.animado {
+  opacity: 0;
+}
+
+.br-3.animado {
+  transform: rotate(45deg) translate(-5px, -10px);
+}/*# sourceMappingURL=custom.css.map */
